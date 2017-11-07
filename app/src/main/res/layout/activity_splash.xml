@@ -30,7 +30,7 @@
             android:textSize="32px"/>
 
         <Button
-            android:id="@+id/btnHelp"
+            android:id="@+id/btnRegister"
             android:layout_width="260px"
             android:layout_height="90px"
             android:layout_alignParentBottom="true"
@@ -38,7 +38,7 @@
             android:layout_marginBottom="40px"
             android:layout_marginRight="40px"
             android:background="@drawable/shape_splash_register"
-            android:text="@string/common_help"
+            android:text="@string/register"
             android:textSize="32px"/>
     </com.zhy.autolayout.AutoRelativeLayout>
 </com.zhy.autolayout.AutoFrameLayout>

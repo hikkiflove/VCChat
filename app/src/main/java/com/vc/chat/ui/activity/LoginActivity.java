@@ -13,6 +13,7 @@ import com.vc.chat.R;
 import com.vc.chat.ui.base.BaseActivity;
 import com.vc.chat.ui.presenter.LoginAtPresenter;
 import com.vc.chat.ui.view.ILoginAtView;
+import com.vc.chat.util.LogUtils;
 import com.vc.chat.util.UIUtils;
 
 import butterknife.BindView;
@@ -31,8 +32,8 @@ public class LoginActivity extends BaseActivity<ILoginAtView, LoginAtPresenter>
     @BindView(R.id.etPwd) EditText mEtPwd;
     @BindView(R.id.vLinePwd) View mVLinePwd;
 
-    //@BindView(R.id.tvProblems) TextView mTvProblems;
     @BindView(R.id.btnLogin) Button mBtnLogin;
+    @BindView(R.id.common_help) TextView mCommonHelp;
     @BindView(R.id.common_config) TextView mCommonConfig;
 
     TextWatcher watcher = new TextWatcher() {
@@ -73,10 +74,17 @@ public class LoginActivity extends BaseActivity<ILoginAtView, LoginAtPresenter>
                 mVLinePhone.setBackgroundColor(UIUtils.getColor(R.color.line));
             }
         });
+        mCommonHelp.setOnClickListener(v -> {
+            //jumpToActivity(LoginActivity.class);
+            //TODO jump to common help activity
+            //finish();
+            LogUtils.d("help on click");
+        });
         mCommonConfig.setOnClickListener(v -> {
             //jumpToActivity(LoginActivity.class);
             //TODO jump to common config activity
-            finish();
+            //finish();
+            LogUtils.d("config on click");
         });
 
         mBtnLogin.setOnClickListener(v -> mPresenter.login());

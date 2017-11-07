@@ -25,7 +25,7 @@ public class SplashActivity extends BaseActivity {
 
     @BindView(R.id.rlButton) RelativeLayout mRlButton;
     @BindView(R.id.btnLogin) Button mBtnLogin;
-    @BindView(R.id.btnHelp) Button mBtnHelp;
+    @BindView(R.id.btnRegister) Button mBtnRegister;
 
     @Override
     public void init() {
@@ -70,9 +70,8 @@ public class SplashActivity extends BaseActivity {
             jumpToActivity(LoginActivity.class);
             finish();
         });
-        mBtnHelp.setOnClickListener(v -> {
-            //jumpToActivity(RegisterActivity.class);
-            //TODO help activity
+        mBtnRegister.setOnClickListener(v -> {
+            jumpToActivity(RegisterActivity.class);
             finish();
         });
     }

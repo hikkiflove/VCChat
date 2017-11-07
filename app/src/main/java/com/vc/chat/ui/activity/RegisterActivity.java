@@ -28,10 +28,10 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
     @BindView(R.id.vLineNick)
     View mVLineNick;
 
-    @BindView(R.id.etPhone)
-    EditText mEtPhone;
-    @BindView(R.id.vLinePhone)
-    View mVLinePhone;
+    @BindView(R.id.etUserName)
+    EditText mEtUserName;
+    @BindView(R.id.vLineUserName)
+    View mVLineUserName;
 
     @BindView(R.id.etPwd)
     EditText mEtPwd;
@@ -39,13 +39,6 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
     ImageView mIvSeePwd;
     @BindView(R.id.vLinePwd)
     View mVLinePwd;
-
-    @BindView(R.id.etVerifyCode)
-    EditText mEtVerifyCode;
-    @BindView(R.id.btnSendCode)
-    Button mBtnSendCode;
-    @BindView(R.id.vLineVertifyCode)
-    View mVLineVertifyCode;
 
     @BindView(R.id.btnRegister)
     Button mBtnRegister;
@@ -69,8 +62,7 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
     public void initListener() {
         mEtNick.addTextChangedListener(watcher);
         mEtPwd.addTextChangedListener(watcher);
-        mEtPhone.addTextChangedListener(watcher);
-        mEtVerifyCode.addTextChangedListener(watcher);
+        mEtUserName.addTextChangedListener(watcher);
 
         mEtNick.setOnFocusChangeListener((v, hasFocus) -> {
             if (hasFocus) {
@@ -86,18 +78,11 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
                 mVLinePwd.setBackgroundColor(UIUtils.getColor(R.color.line));
             }
         });
-        mEtPhone.setOnFocusChangeListener((v, hasFocus) -> {
+        mEtUserName.setOnFocusChangeListener((v, hasFocus) -> {
             if (hasFocus) {
-                mVLinePhone.setBackgroundColor(UIUtils.getColor(R.color.green0));
+                mVLineUserName.setBackgroundColor(UIUtils.getColor(R.color.green0));
             } else {
-                mVLinePhone.setBackgroundColor(UIUtils.getColor(R.color.line));
-            }
-        });
-        mEtVerifyCode.setOnFocusChangeListener((v, hasFocus) -> {
-            if (hasFocus) {
-                mVLineVertifyCode.setBackgroundColor(UIUtils.getColor(R.color.green0));
-            } else {
-                mVLineVertifyCode.setBackgroundColor(UIUtils.getColor(R.color.line));
+                mVLineUserName.setBackgroundColor(UIUtils.getColor(R.color.line));
             }
         });
 
@@ -110,12 +95,6 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
             }
 
             mEtPwd.setSelection(mEtPwd.getText().toString().trim().length());
-        });
-
-        mBtnSendCode.setOnClickListener(v -> {
-            if (mBtnSendCode.isEnabled()) {
-                mPresenter.sendCode();
-            }
         });
 
         mBtnRegister.setOnClickListener(v -> {
@@ -132,9 +111,8 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
     private boolean canRegister() {
         int nickNameLength = mEtNick.getText().toString().trim().length();
         int pwdLength = mEtPwd.getText().toString().trim().length();
-        int phoneLength = mEtPhone.getText().toString().trim().length();
-        int codeLength = mEtVerifyCode.getText().toString().trim().length();
-        if (nickNameLength > 0 && pwdLength > 0 && phoneLength > 0 && codeLength > 0) {
+        int phoneLength = mEtUserName.getText().toString().trim().length();
+        if (nickNameLength > 0 && pwdLength > 0 && phoneLength > 0) {
             return true;
         }
         return false;
@@ -156,22 +134,12 @@ public class RegisterActivity extends BaseActivity<IRegisterAtView, RegisterAtPr
     }
 
     @Override
-    public EditText getEtPhone() {
-        return mEtPhone;
+    public EditText getEtUserName() {
+        return mEtUserName;
     }
 
     @Override
     public EditText getEtPwd() {
         return mEtPwd;
-    }
-
-    @Override
-    public EditText getEtVerifyCode() {
-        return mEtVerifyCode;
-    }
-
-    @Override
-    public Button getBtnSendCode() {
-        return mBtnSendCode;
     }
 }
