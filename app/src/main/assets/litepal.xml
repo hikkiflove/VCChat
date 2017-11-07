@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
-    <dbname value="lqr_wechat"></dbname>
+    <dbname value="vcchat"></dbname>
 
     <version value="1"></version>
 
     <list>
-        <mapping class="com.lqr.chat.db.model.Friend"></mapping>
-        <mapping class="com.lqr.chat.db.model.Groups"></mapping>
-        <mapping class="com.lqr.chat.db.model.GroupMember"></mapping>
+        <mapping class="com.vc.chat.db.model.Friend"></mapping>
+        <mapping class="com.vc.chat.db.model.Groups"></mapping>
+        <mapping class="com.vc.chat.db.model.GroupMember"></mapping>
     </list>
 </litepal>

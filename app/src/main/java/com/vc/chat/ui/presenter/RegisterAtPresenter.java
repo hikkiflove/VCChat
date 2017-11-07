@@ -43,7 +43,7 @@ public class RegisterAtPresenter extends BasePresenter<IRegisterAtView> {
     public void sendCode() {
         String phone = getView().getEtPhone().getText().toString().trim();
         if (TextUtils.isEmpty(phone)) {
-            UIUtils.showToast(UIUtils.getString(R.string.phone_not_empty));
+            UIUtils.showToast(UIUtils.getString(R.string.username_not_empty));
             return;
         }
 
@@ -121,7 +121,7 @@ public class RegisterAtPresenter extends BasePresenter<IRegisterAtView> {
         String code = getView().getEtVerifyCode().getText().toString().trim();
 
         if (TextUtils.isEmpty(phone)) {
-            UIUtils.showToast(UIUtils.getString(R.string.phone_not_empty));
+            UIUtils.showToast(UIUtils.getString(R.string.username_not_empty));
             return;
         }
 

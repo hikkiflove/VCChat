@@ -31,7 +31,7 @@ public class LoginActivity extends BaseActivity<ILoginAtView, LoginAtPresenter>
     @BindView(R.id.etPwd) EditText mEtPwd;
     @BindView(R.id.vLinePwd) View mVLinePwd;
 
-    @BindView(R.id.tvProblems) TextView mTvProblems;
+    //@BindView(R.id.tvProblems) TextView mTvProblems;
     @BindView(R.id.btnLogin) Button mBtnLogin;
     @BindView(R.id.common_config) TextView mCommonConfig;
 
