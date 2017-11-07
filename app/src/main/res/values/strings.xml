@@ -37,9 +37,8 @@
 
     <!--配置-->
     <string name="workflow_addr">业务服务器地址</string>
-    <string name="workflow_port">业务服务器端口</string>
     <string name="msg_addr">消息服务器地址</string>
-    <string name="msg_port">消息服务器端口</string>
+    <string name="port">:</string>
     <string name="workflow_protocol">业务服务器协议</string>
     <string name="workflow_msg">业务服务器协议</string>
     <string name="video_encoder">音视频编码方式</string>

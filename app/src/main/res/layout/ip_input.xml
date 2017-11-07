@@ -1,62 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@null"
-        android:inputType="number"
-        android:maxLength="3"
-        android:text=""/>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/point"/>
+        android:orientation="vertical"
+        android:paddingLeft="10px"
+        android:paddingRight="10px">
 
-    <EditText
-        android:id="@+id/edit2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@null"
-        android:inputType="number"
-        android:maxLength="3"
-        android:text=""/>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/point"/>
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edit3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@null"
-        android:inputType="number"
-        android:maxLength="3"
-        android:text=""/>
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10px"
+                    android:paddingRight="10px">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/point"/>
+                    <EditText
+                        android:id="@+id/edit1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:text=""
+                        android:textSize="28px"/>
 
-    <EditText
-        android:id="@+id/edit4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@null"
-        android:inputType="number"
-        android:maxLength="3"
-        android:text=""/>
-</merge>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/point"/>
+
+                    <EditText
+                        android:id="@+id/edit2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:text=""
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/point"/>
+
+                    <EditText
+                        android:id="@+id/edit3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:text=""
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/point"/>
+
+                    <EditText
+                        android:id="@+id/edit4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textSize="28px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10px"
+                        android:paddingRight="10px"
+                        android:text="@string/port"/>
+
+                    <EditText
+                        android:id="@+id/edit5"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:text=""
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -24,12 +24,14 @@ public class IPEditText extends LinearLayout {
     private EditText Edit2;
     private EditText Edit3;
     private EditText Edit4;
+    private EditText Edit5;
     //文本
     private String text;
     private String text1;
     private String text2;
     private String text3;
     private String text4;
+    private String text5;
 
     public IPEditText(final Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -40,6 +42,7 @@ public class IPEditText extends LinearLayout {
         Edit2 = (EditText) findViewById(R.id.edit2);
         Edit3 = (EditText) findViewById(R.id.edit3);
         Edit4 = (EditText) findViewById(R.id.edit4);
+        Edit5 = (EditText) findViewById(R.id.edit5);
         //初始化函数
         init(context);
     }
@@ -150,6 +153,40 @@ public class IPEditText extends LinearLayout {
 
                     if (Integer.parseInt(text4) > 255) {
                         Toast.makeText(context, R.string.ip_input_error, Toast.LENGTH_LONG).show();
+                    } else {
+                        Edit5.setFocusable(true);
+                        Edit5.requestFocus();
+                    }
+                }
+                /**
+                 * 当用户需要删除时,此时的EditText为空时,上一个EditText获得焦点
+                 */
+                /*
+                if (start == 0 && s.length() == 0) {
+                    Edit3.setFocusable(true);
+                    Edit3.requestFocus();
+                }
+                */
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        Edit5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                text5 = s.toString().trim();
+                if (s.length() > 1) {
+
+                    if (Integer.parseInt(text5) > 65535) {
+                        Toast.makeText(context, R.string.ip_input_error, Toast.LENGTH_LONG).show();
                     }
                 }
                 /**
@@ -208,17 +245,41 @@ public class IPEditText extends LinearLayout {
                 return false;
             }
         });
+        Edit5.setOnKeyListener(new OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (text5 == null || text5.isEmpty()) {
+                    if (keyCode == KeyEvent.KEYCODE_DEL) {
+                        Edit4.setFocusable(true);
+                        Edit4.requestFocus();
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     /**
      * 成员函数，返回整个ip地址
      */
-    public String getText() {
+    public String getIPText() {
         if (TextUtils.isEmpty(text1) || TextUtils.isEmpty(text2)
                 || TextUtils.isEmpty(text3) || TextUtils.isEmpty(text4)) {
             text = null;
         } else {
             text = text1 + "." + text2 + "." + text3 + "." + text4;
+        }
+        return text;
+    }
+
+    /**
+     * 成员函数，返回port
+     */
+    public String getPortText() {
+        if (TextUtils.isEmpty(text5)) {
+            text = null;
+        } else {
+            text = text5;
         }
         return text;
     }
