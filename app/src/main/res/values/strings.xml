@@ -47,6 +47,8 @@
     <string name="auto_answer">自动接听</string>
     <string name="sys_theme">主题</string>
     <string name="sys_logo">LOGO</string>
+    <string name="point">.</string>
+    <string name="ip_input_error">请输入合法的IP地址</string>
 
     <!--注册-->
     <string name="nickname">昵称</string>
