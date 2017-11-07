@@ -37,6 +37,14 @@ public class LoginAtPresenter extends BasePresenter<ILoginAtView> {
         }
 
         mContext.showWaitingDialog(UIUtils.getString(R.string.please_wait));
+
+        if (userName.equals("hikki")) {
+            mContext.hideWaitingDialog();
+            mContext.jumpToActivityAndClearTask(MainActivity.class);
+            mContext.finish();
+        } else {
+            loginError(new ServerException(UIUtils.getString(R.string.login_error)));
+        }
         //TODO verity user name and password from server
         /*ApiRetrofit.getInstance().login(AppConst.REGION, userName, pwd)
                 .subscribeOn(Schedulers.io())
