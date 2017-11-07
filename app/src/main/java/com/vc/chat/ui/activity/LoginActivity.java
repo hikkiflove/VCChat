@@ -81,10 +81,9 @@ public class LoginActivity extends BaseActivity<ILoginAtView, LoginAtPresenter>
             LogUtils.d("help on click");
         });
         mCommonConfig.setOnClickListener(v -> {
-            //jumpToActivity(LoginActivity.class);
+            jumpToActivity(CommonConfigActivity.class);
             //TODO jump to common config activity
             //finish();
-            LogUtils.d("config on click");
         });
 
         mBtnLogin.setOnClickListener(v -> mPresenter.login());

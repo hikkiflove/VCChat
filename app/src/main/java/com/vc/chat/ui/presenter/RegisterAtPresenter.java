@@ -32,8 +32,6 @@ import rx.schedulers.Schedulers;
 
 public class RegisterAtPresenter extends BasePresenter<IRegisterAtView> {
 
-    int time = 0;
-    private Timer mTimer;
     private Subscription mSubscription;
 
     public RegisterAtPresenter(BaseActivity context) {
