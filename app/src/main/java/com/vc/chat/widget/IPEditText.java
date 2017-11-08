@@ -284,4 +284,9 @@ public class IPEditText extends LinearLayout {
         return text;
     }
 
+    public void setPortText(String port) {
+        if ( port != null ) {
+            Edit5.setText(port);
+        }
+    }
 }
