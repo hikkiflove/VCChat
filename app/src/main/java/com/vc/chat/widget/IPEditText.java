@@ -265,7 +265,7 @@ public class IPEditText extends LinearLayout {
     public String getIPText() {
         if (TextUtils.isEmpty(text1) || TextUtils.isEmpty(text2)
                 || TextUtils.isEmpty(text3) || TextUtils.isEmpty(text4)) {
-            text = null;
+            text = "";
         } else {
             text = text1 + "." + text2 + "." + text3 + "." + text4;
         }
@@ -288,5 +288,35 @@ public class IPEditText extends LinearLayout {
         if ( port != null ) {
             Edit5.setText(port);
         }
+    }
+
+    public void setIPFocus() {
+        if (TextUtils.isEmpty(text1)) {
+            Edit1.setFocusable(true);
+            Edit1.requestFocus();
+            return;
+        }
+
+        if (TextUtils.isEmpty(text2)) {
+            Edit2.setFocusable(true);
+            Edit2.requestFocus();
+            return;
+        }
+
+        if (TextUtils.isEmpty(text3)) {
+            Edit3.setFocusable(true);
+            Edit3.requestFocus();
+            return;
+        }
+
+        if (TextUtils.isEmpty(text4)) {
+            Edit4.setFocusable(true);
+            Edit4.requestFocus();
+            return;
+        }
+    }
+
+    public void setPortFocus() {
+        Edit5.setFocusable(true);
     }
 }
