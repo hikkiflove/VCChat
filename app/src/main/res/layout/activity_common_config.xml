@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/workflow_addr"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/workflow_addr"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <com.vc.chat.widget.IPEditText
+                        android:id="@+id/etWorkflowIP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vWorkflow"
+            style="@style/Line"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/msg_addr"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/msg_addr"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <com.vc.chat.widget.IPEditText
+                        android:id="@+id/etMsgIP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vMessage"
+            style="@style/Line"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/workflow_protocol"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/workflow_protocol"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etWorkflow_protocol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:paddingLeft="30px"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vWorkflowProtocol"
+            style="@style/Line"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/msg_protocol"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/msg_protocol"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etMsg_protocol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:paddingLeft="30px"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vMsgProtocol"
+            style="@style/Line"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/video_encoder"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video_encoder"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etVideo_encoder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:paddingLeft="30px"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vVideoEncoder"
+            style="@style/Line"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/video_bandwidth"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video_bandwidth"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <EditText
+                        android:id="@+id/etVideo_bandwidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:paddingLeft="30px"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vVideoBandwidth"
+            style="@style/Line"
+            />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal">
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/auto_answer"
+                        android:layout_width="180px"
+                        android:layout_height="wrap_content"
+                        android:text="@string/auto_answer"
+                        android:textColor="@color/black0"
+                        android:textSize="28px"/>
+
+                    <CheckBox
+                        android:id="@+id/ctAuto_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text=""
+                        android:textColorHint="@color/gray3"
+                        android:paddingLeft="30px"
+                        android:textSize="28px"/>
+
+                </com.zhy.autolayout.AutoLinearLayout>
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:id="@+id/vAutoAnswer"
+            style="@style/Line"
+            />
+
+        <Button
+            android:id="@+id/config_save"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginBottom="30px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/selector_login_btn"
+            android:enabled="false"
+            android:text="@string/config_save"
+            android:textColor="@color/selector_login_btn"
+            android:textSize="30px"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

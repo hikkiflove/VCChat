@@ -159,6 +159,10 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
+            android:name="com.vc.chat.ui.activity.CommonConfigActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
             android:name="com.vc.chat.ui.activity.NewFriendActivity"
             android:screenOrientation="portrait">
         </activity>

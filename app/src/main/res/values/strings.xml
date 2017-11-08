@@ -37,16 +37,25 @@
 
     <!--配置-->
     <string name="workflow_addr">业务服务器地址</string>
+    <string name="workflow_addr_empty">请填写正确的业务服务器地址</string>
     <string name="msg_addr">消息服务器地址</string>
+    <string name="msg_addr_empty">请填写正确的消息服务器地址</string>
     <string name="port">:</string>
     <string name="workflow_protocol">业务服务器协议</string>
-    <string name="workflow_msg">业务服务器协议</string>
+    <string name="workflow_protoco_empty">请填写正确的业务服务器协议</string>
+    <string name="msg_protocol">消息服务器协议</string>
+    <string name="msg_protoco_empty">请填写正确的消息服务器协议</string>
     <string name="video_encoder">音视频编码方式</string>
+    <string name="video_encoder_empty">请填写正确的音视频编码方式</string>
     <string name="video_bandwidth">音视频带宽</string>
+    <string name="video_bandwidth_empty">请填写正确的音视频带宽</string>
     <string name="auto_answer">自动接听</string>
     <string name="sys_theme">主题</string>
     <string name="sys_logo">LOGO</string>
+    <string name="config_save">保存</string>
     <string name="point">.</string>
+    <string name="default_port">80</string>
+    <string name="default_protocol">TCP</string>
     <string name="ip_input_error">请输入合法的IP地址</string>
 
     <!--注册-->

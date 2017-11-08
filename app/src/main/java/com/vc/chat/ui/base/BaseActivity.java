@@ -177,7 +177,9 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AppCom
     /**
      * 显示MaterialDialog
      */
-    public MaterialDialog showMaterialDialog(String title, String message, String positiveText, String negativeText, View.OnClickListener positiveButtonClickListener, View.OnClickListener negativeButtonClickListener) {
+    public MaterialDialog showMaterialDialog(String title, String message, String positiveText,
+            String negativeText, View.OnClickListener positiveButtonClickListener,
+            View.OnClickListener negativeButtonClickListener) {
         hideMaterialDialog();
         mMaterialDialog = new MaterialDialog(this);
         if (!TextUtils.isEmpty(title)) {
